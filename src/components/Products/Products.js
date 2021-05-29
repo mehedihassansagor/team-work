@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import Product from './Product/Product';
 
 const Products = ({products}) => {
+    console.log(products)
     return (
-        <div>
+        <div >
+            
             {
-                products.map((product) => (<Product key={product.id} productData={product}></Product>))
+                products?.map((product) => (<Product key={product.id} productData={product}></Product>))
             }
             
         </div>
