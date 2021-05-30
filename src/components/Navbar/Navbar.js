@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ cart }) => {
-
+    console.log(cart)
     const [cartCounter, setCartCounter] = useState(0);
 
     useEffect(() => {
         let count = 0
-        cart?.forEach(item => {
+        cart.forEach(item => {
             count += item.qty
         })
         setCartCounter(count)
@@ -22,10 +22,10 @@ const Navbar = ({ cart }) => {
                     <form class="d-flex">
                         <Link to='/cart'>
                             <button class="btn btn-outline-dark" type="submit"><img
-                                style={{ width: '10%', }}
+                                style={{ width: '20%', fontWeight:'bold' }}
                                 src="https://image.flaticon.com/icons/svg/102/102276.svg"
                                 alt="shopping cart"
-                            />Hired Developers  {cartCounter}</button>
+                            /><h5>{cartCounter}</h5></button>
                         </Link>
                     </form>
                 </div>

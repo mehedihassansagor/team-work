@@ -2,11 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToCart, loadCurrentItem } from '../../../Redux/Shopping/Shopping-actions';
+import  './Product.css';
 
 const Product = ({productData, addToCart, loadCurrentItem}) => {
     return (
         <div className='row bg-light mt-5 shadow-sm p-3 mb-5 bg-body rounded'>
-            <div className='col-md-3 '>
+            <div className='col-md-3 image-res '>
                 <img className=' d-flex align-items-center' style={{ width: '55%' }} src={productData.image} alt="" />
             </div>
             <div className='col-md-7 mt-2'>

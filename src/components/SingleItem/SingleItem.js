@@ -4,9 +4,11 @@ import { addToCart } from '../../Redux/Shopping/Shopping-actions';
 
 const SingleItem = ({currentItem, addToCart}) => {
     return (
-        <div>
-            <h1>single item {currentItem?.name}</h1>
-            <button onClick={() => addToCart(currentItem.id)}>Add To Cart</button>
+        <div className='text-center m-5 bg-light p-5'>
+            <img className='img-fluid ' style={{borderRadius:'50%', width:'20%'}} src={currentItem?.image} alt="" />
+            <h1>{currentItem?.name}</h1>
+            <p style={{color:'gray'}}>{currentItem?.dis}</p>
+            <button class="btn btn-outline-dark" onClick={() => addToCart(currentItem.id)}>Add To Cart</button>
         </div>
     );
 };
